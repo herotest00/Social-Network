@@ -1,0 +1,189 @@
+.root {
+    -fx-background-color: #1DA1F2;
+}
+
+
+.text-field {
+    -fx-text-fill: #1DA1F2;
+}
+
+
+
+.button {
+    -fx-text-fill: #1DA1F2;
+    -fx-border-color: #1C7CB8;
+}
+
+
+.button:focused {
+    -fx-text-fill: #1DA1F2;
+}
+
+.button:hover {
+    -fx-text-fill: derive(#1DA1F2, 20%);
+}
+
+
+.table-view {
+    -fx-background-color: #82cfff;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #bdedfc;
+    -fx-table-cell-border-color: #bdedfc;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-table-cell-border-color, #429fcf;
+    -fx-table-cell-border-color: #429fcf;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #82cfff;
+    -fx-table-cell-border-color: #82cfff;
+}
+
+.table-row-cell:odd:focused {
+    -fx-background-color: -fx-table-cell-border-color, #429fcf;
+    -fx-table-cell-border-color: #429fcf;
+}
+
+.table-view .filler {
+    -fx-background-color: #1DA1F2;
+}
+
+.table-view .column-header {
+    -fx-background-color: #1DA1F2;
+}
+
+
+.list-view {
+    -fx-background-color: #82cfff;
+}
+
+.list-cell {
+    -fx-background-color: -fx-table-cell-border-color, #bdedfc;
+    -fx-table-cell-border-color: #bdedfc;
+}
+
+.list-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #82cfff;
+    -fx-table-cell-border-color: #82cfff;
+}
+
+.list-cell:focused {
+    -fx-background-color: -fx-table-cell-border-color, #429fcf;
+    -fx-table-cell-border-color: #429fcf;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #1DA1F2;
+}
+
+
+.combo-box .list-cell:hover {
+    -fx-background-color: -fx-table-cell-border-color, #429fcf;
+    -fx-table-cell-border-color: #429fcf;
+}
+
+
+#loginPane .password-field:focused, #registerPane .password-field:focused {
+    -fx-prompt-text-fill:  #1DA1F2;
+}
+
+#loginPane .text-field, #registerPane .text-field {
+    -fx-prompt-text-fill: #bdedfc;
+}
+
+#detailsEventPane .text-field, #newEventTitle {
+    -fx-prompt-text-fill: #bdedfc;
+}
+
+#newEventTitle {
+    -fx-prompt-text-fill: #FFFFFF;
+}
+
+
+#loginPane .text-field:focused, #registerPane .text-field:focused, #detailsEventPane .text-field:focused {
+    -fx-background-color:  #1DA1F2;
+    -fx-prompt-text-fill:  #1DA1F2;
+}
+
+
+
+#detailsEventPane .text-area {
+    -fx-text-fill: #1DA1F2;
+}
+
+
+
+#loginPane {
+    -fx-background-color: #1DA1F2;
+}
+
+
+#tabPane {
+    -fx-background-color: #1DA1F2;
+}
+
+
+#tabPane .tab {
+    -fx-background-color: #1DA1F2;
+}
+
+#tabPane .tab:hover {
+    -fx-background-color: #23B2F4;
+}
+
+
+
+
+#tabPane .tab:focused {
+    -fx-border-color: transparent;
+}
+
+#tabPane .tab:selected {
+    -fx-background-color: #0372B4;
+}
+
+
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-color: #bdedfc;
+    -fx-text-fill: white;
+}
+
+
+.pagination > .pagination-control > .control-box > .number-button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1DA1F2;
+}
+
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-color: #bdedfc;
+    -fx-text-fill: #1DA1F2;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-color: #bdedfc;
+    -fx-text-fill: white;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: derive(#1DA1F2, 20.0%);
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: derive(#1DA1F2, 5.0%);
+}

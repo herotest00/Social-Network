@@ -1,0 +1,66 @@
+INSERT INTO Users (first_name, last_name, username, password) VALUES ('Aprogramatoarei', 'Ionut', 'aprogramatoarei', 'ionut'),
+('Pop', 'Dan', 'pop', 'dan'),
+('Tutu', 'Mumu', 'tutu', 'mumu'),
+('George', 'Gica', 'george', 'gica'), 
+('Petru', 'Pietrosu', 'petru', 'pietrosu'),
+('Ion', 'Dodel', 'ion', 'dodel'),
+('Cristian', 'Iorga', 'cristian', 'iorga'),
+('Adrian', 'Stan', 'adrian', 'stan'),
+('Alin', 'Suciu', 'alin', 'suciu'),
+('Alex', 'Sarbu', 'alex', 'sarbu'),
+('Sandel', 'Croitoru', 'sandel', 'croitoru'),
+('Capitan', 'Mirel', 'capitan', 'mirel')
+
+SELECT * FROM Messages;
+DELETE FROM Messages; ALTER SEQUENCE Messages_id_seq RESTART WITH 1;
+
+INSERT INTO Users (first_name, last_name, username, password) VALUES ('Aprogramatoarei', 'Ionut', 'aprogramatoarei', 'ionut'),
+('Pop', 'Dan', 'pop', 'dan'),
+('Tutu', 'Mumu', 'tutu', 'mumu'),
+('George', 'Gica', 'george', 'gica'), 
+('Petru', 'Pietrosu', 'petru', 'pietrosu'),
+('Ion', 'Dodel', 'ion', 'dodel'),
+('Cristian', 'Iorga', 'cristian', 'iorga'),
+('Adrian', 'Stan', 'adrian', 'stan'),
+('Alin', 'Suciu', 'alin', 'suciu'),
+('Alex', 'Sarbu', 'alex', 'sarbu'),
+('Sandel', 'Croitoru', 'sandel', 'croitoru'),
+('Capitan', 'Mirel', 'capitan', 'mirel')
+
+DELETE FROM Users; ALTER SEQUENCE Users_id_seq RESTART WITH 1;
+
+SELECT * FROM Users;
+
+INSERT INTO Messages(fromu, tou, msg, date) VALUES
+(1, 3, 'ss', '2020-10-28T21:19:30.914389300'),
+(1, 3, 'ss', '2020-10-28T21:19:33.914389300'),
+(1, 10, 'ana pere bune h', '2020-10-28T21:19:35.914389300'),
+(1, 11, 'asta mersa', '2020-10-28T21:19:39.914389300' )
+
+INSERT INTO Messages(fromu, tou, msg, date, reply) VALUES
+(8, 10, 'pere mere haaaa', '2020-10-28T21:19:37.914389300', 3),
+(8, 11, 'mersi', '2020-10-28T21:19:42.914389300', 4)
+
+INSERT INTO Groups(id, g_name) VALUES
+( 1, '1'),
+( 8, '8'),
+( 9, '9'),
+( 2, '1_9'),
+( 3, '1_8_9'),
+(10, 'mare-grup'),
+(11, 'ceva');
+
+
+INSERT INTO UserGroupTo(id_user, id_group) VALUES
+( 1, 2),
+( 9, 2),
+( 1, '1'),
+( 8, '8'),
+( 9, '9'),
+( 1, 3),
+( 8, 3),
+( 9, 3),
+(1, 10),
+(8, 10),
+(1, 11),
+(9, 11);

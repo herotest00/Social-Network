@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="loginPane" fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="644.0" stylesheets="@../css/main.css, @../css/defaultTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.ui.gui.LoginController">
+   <children>
+      <Label id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" focusTraversable="true" layoutX="205.0" layoutY="54.0" prefHeight="105.0" prefWidth="233.0" text="Welcome!" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Webdings" size="32.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="username" layoutX="210.0" layoutY="189.0" promptText="Username">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <PasswordField fx:id="password" layoutX="210.0" layoutY="255.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font></PasswordField>
+      <Button fx:id="loginButton" defaultButton="true" layoutX="239.0" layoutY="321.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="39.0" prefWidth="166.0" text="Login" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="registerButton" layoutX="242.0" layoutY="384.0" minWidth="37.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="39.0" prefWidth="159.0" text="Register" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="notificationLabel" />
+   </children>
+</AnchorPane>

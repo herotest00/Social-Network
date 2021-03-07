@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="eventAnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/combobox.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.ui.gui.EventsController">
+   <children>
+      <Pane id="detailsEventPane" fx:id="detailsEventPane" layoutX="22.0" layoutY="18.0" opacity="0.0" prefHeight="428.0" prefWidth="644.0">
+         <children>
+            <Label fx:id="paneIdOfEvent" layoutX="283.0" layoutY="14.0" opacity="0.0" text="Id event: x" />
+            <TextField fx:id="paneTitleOfEvent" layoutX="185.0" layoutY="13.0" prefHeight="27.0" prefWidth="251.0" promptText="Title" />
+            <TextArea fx:id="paneDescriptionOfEvent" layoutX="183.0" layoutY="120.0" prefHeight="212.0" prefWidth="254.0" promptText="Description..." />
+            <Label fx:id="paneStartOfEvent" layoutX="449.0" layoutY="6.0" text="Starts at dd/mm/yyyyy hh/MM" />
+            <Label fx:id="paneEndOfEvent" layoutX="453.0" layoutY="53.0" text="Ends at dd/mm/yyyyy hh/MM" />
+            <Label fx:id="paneUsersParticipatingEvent" layoutX="237.0" layoutY="93.0" text="X users participating" />
+            <Label fx:id="paneCreatedByOfEvent" layoutX="253.0" layoutY="72.0" text="Created by User" />
+            <Button fx:id="paneNotifyEventButton" layoutX="184.0" layoutY="341.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="117.0" text="Notify" />
+            <Button fx:id="paneUpdateEventButton" layoutX="184.0" layoutY="384.0" mnemonicParsing="false" onAction="#handlerUpdateButton" prefHeight="37.0" prefWidth="117.0" text="Update" />
+            <Button fx:id="backEventButton" layoutX="320.0" layoutY="341.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="117.0" text="Back" />
+            <Button fx:id="paneRemoveEventButton" layoutX="320.0" layoutY="384.0" mnemonicParsing="false" onAction="#handlerRemoveButton" prefHeight="37.0" prefWidth="117.0" text="Remove" />
+         </children>
+      </Pane>
+      <Pane id="newEventPane" fx:id="newEventPane" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="428.0" prefWidth="644.0">
+         <children>
+            <TextField id="newEventTitle" fx:id="newEventTitle" layoutX="58.0" layoutY="25.0" prefHeight="27.0" prefWidth="251.0" promptText="Title" />
+            <TextArea fx:id="newEventArea" layoutX="57.0" layoutY="76.0" prefHeight="314.0" prefWidth="254.0" promptText="Description..." />
+            <DatePicker fx:id="startDateEvent" layoutX="424.0" layoutY="77.0" prefHeight="25.0" prefWidth="170.0" />
+            <Label layoutX="461.0" layoutY="110.0" prefHeight="17.0" prefWidth="170.0" text="Start time ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="454.0" layoutY="47.0" prefHeight="17.0" prefWidth="170.0" text="Start date ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="startHourEvent" layoutX="424.0" layoutY="140.0" prefHeight="35.0" prefWidth="170.0" visibleRowCount="5" />
+            <Label layoutX="461.0" layoutY="180.0" prefHeight="17.0" prefWidth="96.0" text="End date ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDateEvent" layoutX="425.0" layoutY="210.0" prefHeight="25.0" prefWidth="170.0" />
+            <Label layoutX="461.0" layoutY="254.0" prefHeight="17.0" prefWidth="96.0" text="End time ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="endHourEvent" layoutX="427.0" layoutY="284.0" prefHeight="35.0" prefWidth="175.0" visibleRowCount="5" />
+            <Button fx:id="submitEvent" layoutX="425.0" layoutY="342.0" mnemonicParsing="false" onAction="#submitNewEventClicked" prefHeight="41.0" prefWidth="84.0" text="Submit" />
+            <Button fx:id="backNewEventButton" layoutX="515.0" layoutY="342.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="84.0" text="Back" />
+         </children>
+      </Pane>
+      <Pane fx:id="subscribedEventsPane" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="428.0" prefWidth="644.0">
+         <children>
+            <Label layoutX="218.0" layoutY="14.0" text="Subscribed Events">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="subscribedEventsTable" layoutX="74.0" layoutY="60.0" prefHeight="212.0" prefWidth="473.0">
+               <columns>
+                  <TableColumn fx:id="titleSubscribedEvents" minWidth="160.0" prefWidth="160.0" text="Title" />
+                  <TableColumn fx:id="startSubscribedEvents" minWidth="150" prefWidth="150" text="Start" />
+                  <TableColumn fx:id="endSubscribedEvents" minWidth="160" prefWidth="160" text="End" />
+               </columns>
+            </TableView>
+            <Pagination fx:id="subscribedEventsPagination" layoutX="74.0" layoutY="56.0" prefHeight="258.0" prefWidth="473.0" />
+            <Button fx:id="unsubscribeButton" layoutX="149.0" layoutY="318.0" mnemonicParsing="false" onAction="#unsubscribeEventClicked" prefHeight="38.0" prefWidth="117.0" text="Unsubscribe" />
+            <Button fx:id="detailsSubscribedButton" layoutX="356.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="Details" />
+            <Button fx:id="newEventButton" layoutX="149.0" layoutY="366.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="New Event" />
+            <Button fx:id="allEventsButton" layoutX="356.0" layoutY="366.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="All Events" />
+         </children>
+      </Pane>
+
+      <Pane fx:id="allEventsPane" layoutX="10.0" layoutY="10.0" prefHeight="428.0" prefWidth="644.0">
+         <children>
+            <Label layoutX="260.0" layoutY="14.0" text="All Events">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="allEventsTable" layoutX="74.0" layoutY="58.0" prefHeight="212.0" prefWidth="473.0">
+               <columns>
+                  <TableColumn fx:id="titleAllEvents" minWidth="160.0" prefWidth="160.0" text="Title" />
+                  <TableColumn fx:id="startAllEvents" minWidth="150.0" prefWidth="150.0" text="Start" />
+                  <TableColumn fx:id="endAllEvents" minWidth="160.0" prefWidth="160.0" text="End" />
+               </columns>
+            </TableView>
+            <Pagination fx:id="allEventsPagination" layoutX="74.0" layoutY="56.0" prefHeight="258.0" prefWidth="473.0" />
+            <Button fx:id="subscribeButton" layoutX="149.0" layoutY="318.0" mnemonicParsing="false" onAction="#subscribeEventClicked" prefHeight="38.0" prefWidth="117.0" text="Subscribe" />
+            <Button fx:id="detailsEventButton" layoutX="356.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="Details" />
+            <Button fx:id="newEventButton1" layoutX="149.0" layoutY="366.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="New Event" />
+            <Button fx:id="subscribedEventsButton" layoutX="356.0" layoutY="366.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" text="Subscribed" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

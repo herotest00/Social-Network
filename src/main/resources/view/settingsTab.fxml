@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.ui.gui.SettingsController">
+   <children>
+      <Button id="pinkThemeButton" layoutX="253.0" layoutY="272.0" mnemonicParsing="false" onAction="#pinkThemeClicked" prefHeight="48.0" prefWidth="93.0" text="Pink" />
+      <Button id="defaultThemeButton" layoutX="253.0" layoutY="113.0" mnemonicParsing="false" onAction="#defaultThemeClicked" prefHeight="48.0" prefWidth="93.0" text="Default" />
+      <Button id="nightThemeButton" layoutX="253.0" layoutY="191.0" mnemonicParsing="false" onAction="#nightThemeClicked" prefHeight="48.0" prefWidth="93.0" text="Nightmode" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="60.0" prefHeight="17.0" prefWidth="189.0" text="Color Theme" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

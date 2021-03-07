@@ -1,0 +1,310 @@
+.root{
+    font-family: "Segoe UI", "Arial Black", sans-serif;
+}
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-prompt-text-fill: #0F0F0F;
+    font-family: "Segoe UI", "Arial Black", sans-serif;
+}
+
+.text-field:focused {
+    -fx-background-color: #fdfdfd;
+    -fx-prompt-text-fill: #dddddd;
+    -fx-font-weight: bold;
+}
+
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 80px;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 80px;
+    -fx-background-insets: 0;
+    -fx-font-size: 13px;
+}
+
+#chatButton {
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+}
+
+.button:focused {
+    -fx-background-color: #dddddd;
+}
+
+.button:hover {
+    -fx-background-color: #dddddd;
+}
+
+
+.table-view {
+    -fx-border-style: none;
+}
+
+.table-row-cell {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-font-size: 14px;
+}
+
+
+.table-row-cell:odd {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+}
+
+.list-cell {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-font-size: 16px;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+    -fx-min-height: 0;
+}
+
+
+.combo-box .list-cell:hover {
+    -fx-text-fill: #FFFFFF;
+}
+
+#loginPane .password-field, #registerPane .password-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-text-box-border: #FFFFFF;
+    -fx-focus-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0 0 2.5 0; // top, right, bottom, left
+}
+
+
+#loginPane .text-field, #registerPane .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0 0 2.5 0; // top, right, bottom, left
+}
+
+#detailsEventPane .text-field, #newEventTitle{
+    -fx-font-size: 19px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0 0 2.5 0; // top, right, bottom, left
+}
+
+#newEventTitle {
+    -fx-prompt-text-fill: #FFFFFF;
+}
+
+#newEventPane .text-field {
+    -fx-font-size: 16px;
+}
+
+
+#loginPane .text-field:focused, #registerPane .text-field:focused, #detailsEventPane .text-field:focused {
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 3.5 0;
+    -fx-background-insets: 0 0 0 0 ;
+    -fx-background-radius: 0 ;
+}
+
+
+.data-picket {
+    -fx-background-radius: 90px;
+    -fx-border-radius: 60px;
+}
+
+.date-picker .label {
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 15px;
+}
+
+.date-picker .button {
+    -fx-border-width: 0;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+}
+
+#sentFriendRequestsTable .label, #receivedFriendRequestsTable .label {
+    -fx-font-size: 14px;
+}
+
+#sentFriendRequestsTable .table-row-cell, #receivedFriendRequestsTable .table-row-cell {
+    -fx-font-size: 11px;
+}
+
+#welcomeLabel, #registerLabel {
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 80px;
+    -fx-border-width: 5px;
+    -fx-font-size: 40px;
+}
+
+#detailsEventPane .label {
+    -fx-font-size: 15px;
+}
+
+#detailsEventPane .text-area {
+    -fx-border-width: 3px;
+    -fx-background-radius: 20px;
+    -fx-background-color: #FFFFFF;
+}
+
+
+#detailsEventPane .text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+#detailsEventPane .text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+#tabPane {
+    -fx-focus-color: transparent;
+}
+
+
+#tabPane .tab {
+    -fx-padding: 2px 20px 2px 20px;
+}
+
+#tabPane .tab:hover {
+    -fx-text-fill: #cccccc;
+    -fx-padding: 2px 25px 2px 25px;
+}
+
+
+#tabPane .tab-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.table-view {
+    -fx-alignment: CENTER;
+    -fx-alternative-row-fill-visible: false;
+}
+
+
+
+.tab-header-area {
+    -fx-background-color: green;
+    -fx-text-fill: green;
+}
+#tabPane .tab:focused {
+    -fx-border-color: transparent;
+}
+
+#tabPane .tab:selected {
+    -fx-padding: 2px 25px 2px 25px;
+    -fx-text-fill: #eeeeee;
+}
+
+.notification-label-error {
+    -fx-font-size: 13px;
+    -fx-background-color: #eb3434;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-max-width: 200;
+}
+
+.notification-label-confirmation {
+    -fx-font-size: 13px;
+    -fx-background-color: #52fc03;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-max-width: 200;
+}
+
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+
+.pagination > .pagination-control > .control-box > .number-button {
+    -fx-background-insets: 0, 1;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 3px 3px 5px 3px;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+}
+
+.pagination .page-information {
+    -fx-font-size: 0px;
+    -fx-text-fill: transparent;
+}
+
+.pagination .button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#pinkThemeButton {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #fb91f8, #fff2fd);
+    -fx-text-fill: #FFFFFF;
+}
+
+#defaultThemeButton {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #1DA1F2, #bdedfc);
+    -fx-text-fill: #FFFFFF;
+}
+
+#nightThemeButton {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #202020, #606060);
+    -fx-text-fill: #FFFFFF;
+}

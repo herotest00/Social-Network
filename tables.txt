@@ -1,0 +1,80 @@
+CREATE TABLE Messages (
+id BIGSERIAL PRIMARY KEY,
+fromU BIGINT NOT NULL, 
+toU BIGINT NOT NULL,
+msg VARCHAR(500) NOT NULL,
+date TIMESTAMP NOT NULL,
+reply BIGINT,
+FOREIGN KEY (reply) REFERENCES Messages(id),
+FOREIGN KEY (fromU) REFERENCES Users(id),
+FOREIGN KEY (toU) REFERENCES Groups(id)
+);
+
+CREATE TABLE FriendRequests(
+    id_user1 BIGINT NOT NULL,
+    id_user2 BIGINT NOT NULL,
+    date TIMESTAMP NOT NULL,
+    PRIMARY KEY (id_user1, id_user2),
+    CONSTRAINT friendship
+        FOREIGN KEY (id_user1) REFERENCES Users(id) ON DELETE CASCADE,
+        FOREIGN KEY (id_user2) REFERENCES Users(id) ON DELETE CASCADE
+        
+);
+
+create table Users
+(
+    id         BIGSERIAL       not null
+        constraint users_pkey
+            primary key,
+    first_name varchar(40) not null,
+    last_name  varchar(40) not null,
+	username varchar(40) unique not null,
+	password varchar(40) not null
+);
+
+create table Friendships
+(
+    id_user1 bigint not null
+        constraint fk_user1
+            references users
+            on delete cascade,
+    id_user2 bigint not null
+        constraint fk_user2
+            references users
+            on delete cascade,
+    date     date   not null,
+    constraint friendships_pkey
+        primary key (id_user1, id_user2)
+);
+
+CREATE TABLE Groups(
+id BIGSERIAL PRIMARY KEY,
+g_name VARCHAR ( 30 ) NOT NULL
+);
+
+CREATE TABLE UserGroupTo(
+id_user BIGINT NOT NULL,
+id_group BIGINT NOT NULL,
+PRIMARY KEY (id_user, id_group),
+FOREIGN KEY (id_user) REFERENCES Users(id),
+FOREIGN KEY (id_group) REFERENCES Groups(id) 
+);
+
+CREATE TABLE Events (
+id BIGSERIAL PRIMARY KEY,
+id_owner BIGINT NOT NULL,
+title VARCHAR(50) NOT NULL,
+description VARCHAR(1500) NOT NULL,
+start_time TIMESTAMP NOT NULL,
+end_time TIMESTAMP NOT NULL,
+CONSTRAINT fk_userE FOREIGN KEY (id_owner) REFERENCES Users (id)
+);
+
+CREATE TABLE UserEvent (
+id_event BIGINT NOT NULL,
+id_user BIGINT NOT NULL,
+notify BOOLEAN DEFAULT TRUE NOT NULL,
+PRIMARY KEY (id_event, id_user),
+CONSTRAINT fk_eventUE FOREIGN KEY (id_event) REFERENCES Events (id) ON DELETE CASCADE,
+CONSTRAINT fk_userUE FOREIGN KEY (id_user) REFERENCES Users (id)
+)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane fx:id="tabPane" id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/main.css, @../css/defaultTheme.css" prefHeight="457.0" prefWidth="644.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.ui.gui.MainController">
+  <tabs>
+      <Tab fx:id="homeTab" id="homeTab" text="Home">
+          <fx:include fx:id="home" source="homeTab.fxml" />
+      </Tab>
+      <Tab fx:id="friendRequestsTab" id="friendRequestsTab" text="Friend requests">
+          <fx:include fx:id="friendRequests" source="friendRequestsTab.fxml" />
+      </Tab>
+      <Tab fx:id="usersTab" id="usersTab" text="Users">
+          <fx:include fx:id="users" source="usersTab.fxml" />
+      </Tab>
+      <Tab fx:id="chatsTab" text="Chats">
+          <fx:include fx:id="chats" source="chatsTab.fxml" />
+      </Tab>
+      <Tab fx:id="eventsTab" text="Events">
+          <fx:include fx:id="events" source="eventsTab.fxml" />
+      </Tab>
+      <Tab fx:id="settingsTab" text="Settings">
+          <fx:include fx:id="settings" source="settingsTab.fxml" />
+      </Tab>
+  </tabs>
+</TabPane>
