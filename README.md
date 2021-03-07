@@ -5,6 +5,7 @@ Throughout the development of this project, I've learned to:
 -use database in a project  
 -use JUnit  
 -use git  
+-use javaFX  
 -make a login system with encrypted passwords  
 -make a pretty good looking GUI.  
 
