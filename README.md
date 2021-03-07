@@ -8,5 +8,5 @@ Throughout the development of this project, I've learned to:
 -make a login system with encrypted passwords
 -make a pretty good looking GUI.
 
-####The period I made this project:
-####xx-12-2020 -> xx-01-2021
+#### The period I made this project:
+#### xx-12-2020 -> xx-01-2021
